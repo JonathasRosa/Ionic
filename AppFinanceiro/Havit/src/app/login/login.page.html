@@ -1,68 +1,46 @@
-<ion-content ion-padding class="animated fadeIn login auth-page">
-  <div class="login-content">
-
+<ion-content padding class="animated fadeIn login auth-page">
+  <div class="theme-bg"></div>
+  <div class="auth-content">
     <!-- Logo -->
     <div padding-horizontal text-center class="animated fadeInDown">
       <div class="logo"></div>
-      <h2 ion-text class="text-primary">
-        <strong>Ionic 3</strong> Start Theme
-      </h2>
+      <h4 no-margin >
+        <p align="center"><ion-img class="img-loguin" src="../assets/img/01.png"></ion-img></p>
+        <ion-text color="light" class="fw700">Havit</ion-text>
+      </h4>
     </div>
-
     <!-- Login form -->
     <form class="list-form">
       <ion-item no-padding class="animated fadeInUp">
         <ion-label position="floating">
-          <ion-icon name="mail" item-start></ion-icon>
+          <ion-icon name="person" item-start></ion-icon>
           Usuário
         </ion-label>
         <ion-input color="secondary" type="email"></ion-input>
       </ion-item>
-
-      <ion-item>
-        <ion-label floating>
-          <ion-icon name="lock" item-start class="text-primary"></ion-icon>
-          Password
+      <p ion-text class="text08">
+        <ion-text color="warning">
+          Campo Requerido
+        </ion-text>
+      </p>
+      <ion-item no-padding class="animated fadeInUp">
+        <ion-label position="floating">
+          <ion-icon name="key" item-start ></ion-icon>
+          Senha
         </ion-label>
-        <ion-input type="password"></ion-input>
+        <ion-input color="secondary" type="password"></ion-input>
       </ion-item>
-    </form>
-
-    <p text-right ion-text color="secondary" tappable (click)="forgotPass()"><strong>Forgot
-        Password?</strong></p>
-
+      <p ion-text color="warning" class="text08">
+        <ion-text color="warning">
+          Campo Requerido
+        </ion-text>
+      </p>
+    </form><br><br>
     <div>
-      <button ion-button icon-start block color="dark" tappable (click)="login()">
+      <ion-button icon-left size="medium" expand="full" shape="round" color="dark" (click)="goToHome()" tappable>
         <ion-icon name="log-in"></ion-icon>
-        SIGN IN
-      </button>
-
-      <p text-center ion-text color="secondary">Or Sign in with:</p>
-
-      <ion-grid>
-        <ion-row>
-          <ion-col col-4>
-            <button ion-button icon-only block class="btn-facebook">
-              <ion-icon name="logo-facebook"></ion-icon>
-            </button>
-          </ion-col>
-          <ion-col col-4>
-            <button ion-button icon-only block class="btn-twitter">
-              <ion-icon name="logo-twitter"></ion-icon>
-            </button>
-          </ion-col>
-          <ion-col col-4>
-            <button ion-button icon-only block class="btn-gplus">
-              <ion-icon name="logo-googleapis"></ion-icon>
-            </button>
-          </ion-col>
-        </ion-row>
-      </ion-grid>
+        Signin
+      </ion-button>
     </div>
-    <!-- Other links -->
-    <div text-center margin-top>
-      <span ion-text color="secondary" tappable (click)="register()">New here? <span>Sign up</span>strong></span>
-    </div>
-
   </div>
 </ion-content>
